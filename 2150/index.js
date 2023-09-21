@@ -34,7 +34,7 @@ window.addEventListener("load", () => {
       
     link.onclick = () => {
 
-      const text = `data:text/html,<div style="line-height:1em;word-wrap:break-word;"id=d><script>for(i=0;1e4>i;i++)d.innerHTML+=Math.random()<.5&&"\u29F8"||"\u29F9"</script>`;
+      const text = `<!doctypehtml><title>2150</title><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><script src=https://iguannalin.github.io/ctw/2150/index.js></script><div id=container><h1 id=heading data-total="${total}"></h1><img id=img> <a id=link>let’s go shopping</a></div>`;
 
 
 // const byteCharacters = atob(base64ImageData.substr(`data:${contentType};base64,`.length));
