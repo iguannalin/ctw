@@ -31,12 +31,38 @@ window.addEventListener("load", () => {
       // sessionStorage.setItem("total", total);
       // sessionStorage.setItem("page", page);
       total -= item.regularPrice;
-    // link.onclick = () => {
-      // const opened = window.open(`data:text/html,<div style="line-height:1em;word-wrap:break-word;"id=d><script>for(i=0;1e4>i;i++)d.innerHTML+=Math.random()<.5&&"\u29F8"||"\u29F9"</script>`, "_self");
+      
+    link.onclick = () => {
+
+      const text = `data:text/html,<div style="line-height:1em;word-wrap:break-word;"id=d><script>for(i=0;1e4>i;i++)d.innerHTML+=Math.random()<.5&&"\u29F8"||"\u29F9"</script>`;
+
+
+// const byteCharacters = atob(base64ImageData.substr(`data:${contentType};base64,`.length));
+// const byteArrays = [];
+
+// for (let offset = 0; offset < byteCharacters.length; offset += 1024) {
+//     const slice = byteCharacters.slice(offset, offset + 1024);
+
+//     const byteNumbers = new Array(slice.length);
+//     for (let i = 0; i < slice.length; i++) {
+//         byteNumbers[i] = slice.charCodeAt(i);
+//     }
+
+//     const byteArray = new Uint8Array(byteNumbers);
+
+//     byteArrays.push(byteArray);
+// }
+// const blob = new Blob(byteArrays, {type: contentType});
+var blob = new Blob([text], {type: "text/html"});
+const blobUrl = URL.createObjectURL(blob);
+
+window.open(blobUrl, '_blank');
+window.URL.revokeObjectURL(blobUrl)
+      // const opened = window.open(`data:text/html,<div style="line-height:1em;word-wrap:break-word;"id=d><script>for(i=0;1e4>i;i++)d.innerHTML+=Math.random()<.5&&"\u29F8"||"\u29F9"</script>`);
       // const opened = window.open("");
       // opened.document.writeln(`<!doctypehtml><title>2150</title><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><script src=https://iguannalin.github.io/ctw/2150/index.js></script><div id=container><h1 id=heading data-total="${total}"></h1><img id=img> <a id=link>let’s go shopping</a></div>`);
       // console.log({opened});
-    // }
+    }
   }
 
   function startShopping(groceries) {
