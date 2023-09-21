@@ -8,6 +8,7 @@ window.addEventListener("load", () => {
   const heading = document.getElementById("heading");
   const link = document.getElementById("link");
   const img = document.getElementById("img");
+  const container = document.getElementById("container");
 
   function displayItem(item) {
     let total = heading.dataset.total;
@@ -16,6 +17,10 @@ window.addEventListener("load", () => {
       img.src = item.imageThumbnail;
       img.width = "200";
       link.innerHTML = "continue shopping";
+    } else if (total != 2150) {
+      heading.innerHTML = `you have $${Math.round(total * 100) / 100} left<br><br>good luck!`;
+      container.removeChild(img);
+      container.removeChild(link);
     }
     total -= item.regularPrice;
       
