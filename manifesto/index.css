@@ -3,9 +3,6 @@
   src: url('DotGothic16/DotGothic16-Regular.ttf');
 }
 
-/* @import url(small.css) (min-width:0px);
-@import url(large.css) (min-width:900px); */
-
 :root {
   --main-bg-color: rgb(35, 35, 35);
   --main-text-color: #f9faffde;
