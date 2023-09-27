@@ -18,7 +18,7 @@ window.addEventListener("load", () => {
     }
     link.innerText = rule;
     link.onclick = () => {
-      const text = `<!doctypehtml><title>2150</title><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><script src=https://iguannalin.github.io/ctw/2150/index.js></script><div id=container><h1 id=heading data-total="${total}"></h1><img id=img> <button id=link>let’s go shopping</button></div>`;
+      const text = `<!doctypehtml><title>website-making manifesto</title><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=https://iguannalin.github.io/ctw/manifesto/index.css rel=stylesheet><script src=https://iguannalin.github.io/ctw/manifesto/index.js></script><div data-coord=${x},${y} id=container></div>`;
       const blob = new Blob([text], {type: "text/html"});
       const blobUrl = URL.createObjectURL(blob);
       window.open(blobUrl, '_blank');
@@ -39,7 +39,7 @@ window.addEventListener("load", () => {
     
   }
 
-  fetch("manifesto.json").then((r) => r.json()).then((d) => {
+  fetch("https://iguannalin.github.io/ctw/manifesto/manifesto.json").then((r) => r.json()).then((d) => {
     assign(d);
   })
 });
