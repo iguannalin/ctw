@@ -1,6 +1,7 @@
 window.addEventListener("load", () => {
   const container = document.getElementById("container");
   const center = container.dataset.coord;
+  const cCoord = center.split(",");
   const whalf = window.innerWidth/2;
   const hhalf = window.innerHeight/2;
   const coordsX = [0,1,0,-1];
@@ -17,8 +18,8 @@ window.addEventListener("load", () => {
       link.style.top = hhalf+(y*250)+"px";
     }
     link.innerText = rule;
-    link.onclick = () => {
-      const text = `<!doctypehtml><title>website-making manifesto</title><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=https://iguannalin.github.io/ctw/manifesto/index.css rel=stylesheet><script src=https://iguannalin.github.io/ctw/manifesto/index.js></script><div data-coord=${x},${y} id=container></div>`;
+    if (!isCenter) link.onclick = () => {
+      const text = `<!doctypehtml><title>website-making manifesto</title><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=https://iguannalin.github.io/ctw/manifesto/index.css rel=stylesheet><script src=https://iguannalin.github.io/ctw/manifesto/index.js></script><div data-coord=${+cCoord[0]+x},${+cCoord[1]+y} id=container></div>`;
       const blob = new Blob([text], {type: "text/html"});
       const blobUrl = URL.createObjectURL(blob);
       window.open(blobUrl, '_blank');
@@ -30,7 +31,6 @@ window.addEventListener("load", () => {
   function assign(rules) {
     if (rules[center]) display(rules[center], 0, 0, true);
     coordsX.forEach((x,index) => {
-      const cCoord = center.split(",");
       const coord = `${+cCoord[0]+x},${+cCoord[1]+coordsY[index]}`;
       if (rules[coord]) {
         display(rules[coord], x, coordsY[index]);
