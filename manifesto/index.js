@@ -4,6 +4,7 @@ window.addEventListener("load", () => {
   const cCoord = center.split(",");
   const whalf = window.innerWidth/2;
   const hhalf = window.innerHeight/2;
+  const scale = Math.min(window.innerWidth, window.innerHeight)/3;
   const coordsX = [0,1,0,-1];
   const coordsY = [1,0,-1,0];
 
@@ -14,8 +15,8 @@ window.addEventListener("load", () => {
       link.style.top = hhalf+"px";
       link.classList = "center";
     } else {
-      link.style.left = whalf+(x*250)+"px";
-      link.style.top = hhalf+(y*250)+"px";
+      link.style.left = whalf+(x*scale)+"px";
+      link.style.top = hhalf+(y*scale)+"px";
     }
     link.innerText = rule;
     if (!isCenter) link.onclick = () => {
