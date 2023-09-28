@@ -16,11 +16,11 @@ window.addEventListener("load", () => {
     link.style.top = rh+"px";
     link.innerHTML = key;
     setInterval(() => {
-      rw = (rw > w ? 0 : rw+1);
+      rw = (rw > w ? getRandomInt(0,w) : rw+1);
       link.style.left = rw+"px";
-      rh = (rh > h ? 0 : rh+1);
+      rh = (rh > h ? getRandomInt(0,h) : rh+1);
       link.style.top = rh+"px";
-    }, 20);
+    }, 250);
     link.onclick = () => {
       const text = `<!doctypehtml><title>how-to live with tech</title><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=https://iguannalin.github.io/ctw/how-to/index.css rel=stylesheet><script src=https://iguannalin.github.io/ctw/how-to/spam.js></script><div data-key=${key} data-value=${value} id=container></div>`;
       const blob = new Blob([text], {type: "text/html"});
