@@ -23,7 +23,7 @@ window.addEventListener("load", () => {
   }
 
   fetch("https://iguannalin.github.io/ctw/how-to/things.json").then((r) => r.json()).then((d) => {
-    console.log({key, d, d[key]});
+    console.log({key, d});
     showContent(d[key]);
   })
 });
