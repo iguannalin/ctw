@@ -32,7 +32,6 @@ window.addEventListener("load", () => {
   }
 
   fetch("https://iguannalin.github.io/ctw/how-to/things.json").then((r) => r.json()).then((d) => {
-    console.log(Object.keys(d));
     Object.keys(d).forEach((key) => {
       display(key, d[key]);
     });
