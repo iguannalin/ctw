@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "DotGothic16";
+  src: url('https://iguannalin.github.io/ctw/manifesto/DotGothic16/DotGothic16-Regular.ttf');
+}
+
+:root {
+  --main-bg-color: rgb(35, 35, 35);
+  --main-text-color: #f9faffde;
+  --shadow-color: #858ebc;
+}
+
+html {
+  display: block;
+  font-family: "DotGothic16";
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  text-shadow: var(--shadow-color) -2px 2px 8px;
+}
+
+a {
+  position: absolute;
+  cursor: crosshair;
+  /* max-width: 15ch; */
+  /* max-width: 5ch; */
+  /* max-height: 12ch; */
+  /* overflow-y: clip;
+  text-overflow: ellipsis; */
+}
