@@ -12,8 +12,7 @@ window.addEventListener("load", () => {
 
   function showContent() {
     console.log({key, value});
-    if (!key || !value) return;
-    container.style.backgroundColor = "#"+palettes[getRandomInt(0, palettes.length)];
+    document.body.style.backgroundColor = "#"+palettes[getRandomInt(0, palettes.length)];
     const div = document.createElement("div");
     const h2 = document.createElement("h2");
     h2.innerHTML = key;
