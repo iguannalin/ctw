@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
     const div = document.createElement("div");
     const h2 = document.createElement("h2");
     h2.innerHTML = key;
-    const p = document.createElement("p");
+    const p = document.createElement("div");
     p.innerHTML = value;
     div.appendChild(h2);
     div.appendChild(p);

@@ -4,7 +4,6 @@ window.addEventListener("load", () => {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
   }
-  const container = document.getElementById("container");
   const w = window.innerWidth;
   const h = window.innerHeight;
 
@@ -20,12 +19,13 @@ window.addEventListener("load", () => {
       link.style.left = rw+"px";
       rh = (rh > h ? getRandomInt(0,h) : rh+1);
       link.style.top = rh+"px";
-    }, 250);
+    }, 50);
     link.onclick = () => {
       const text = `<!doctypehtml><title>how-to live with tech</title><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=https://iguannalin.github.io/ctw/how-to/index.css rel=stylesheet><script src=https://iguannalin.github.io/ctw/how-to/spam.js></script><div data-key=${btoa(key)} data-value=${btoa(value)} id=container></div>`;
       const blob = new Blob([text], {type: "text/html"});
       const blobUrl = URL.createObjectURL(blob);
-      window.open(blobUrl, "_blank", `popup,location,status,scrollbars,resizable,width=400, height=400, left=${getRandomInt(0,500)}, top=${getRandomInt(0,500)}`);
+      for (let i = 0; i < getRandomInt(1,10); i++) 
+        setTimeout(window.open(blobUrl, "_blank", `popup,location,status,scrollbars,resizable,width=400, height=400, left=${getRandomInt(0,500)}, top=${getRandomInt(0,500)}`), i*10);
       window.URL.revokeObjectURL(blobUrl);
 
     }
