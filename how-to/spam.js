@@ -22,5 +22,5 @@ window.addEventListener("load", () => {
     container.appendChild(div);
   }
 
-  setInterval(showContent, 250);
+  setInterval(showContent, 500);
 });

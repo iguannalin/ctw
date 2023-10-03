@@ -9,6 +9,7 @@ window.addEventListener("load", () => {
 
   function display(key, value) {
     const link = document.createElement("a");
+    link.className = "guide-link";
     let rw = getRandomInt(0,w);
     let rh = getRandomInt(0,h);
     link.style.left = rw+"px";
