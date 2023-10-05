@@ -17,6 +17,11 @@
   {
     "name": "personal-website",
     "description": "this is self-referential",
-    "url": "https://iguannalin.github.io/ctw/"
+    "url": "https://iguannalin.github.io/ctw"
+  },
+  {
+    "name": "anna y lin",
+    "description": "home",
+    "url": "https://annaylin.com"
   }
 ]
