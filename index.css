@@ -37,6 +37,7 @@ body {
 
 #subtitle {
   content: "~";
+  height: 16px;
   margin-top: 1px;
   width: 80vw;
   border-top: white 10px solid;
