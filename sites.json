@@ -1,0 +1,22 @@
+[
+  {
+    "name": "2150",
+    "description": "when your grandma died, she left you $2150",
+    "url": "https://iguannalin.github.io/ctw/2150"
+  },
+  {
+    "name": "manifesto",
+    "description": "100 days of website-making manifesto",
+    "url": "https://iguannalin.github.io/ctw/manifesto"
+  },
+  {
+    "name": "how-to live with tech",
+    "description": "a guide to a co-existence with modern technology",
+    "url": "https://iguannalin.github.io/ctw/how-to"
+  },
+  {
+    "name": "personal-website",
+    "description": "this is self-referential",
+    "url": "https://iguannalin.github.io/ctw/"
+  }
+]
