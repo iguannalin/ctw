@@ -39,7 +39,7 @@ window.addEventListener("load", () => {
   }
           
 
-  fetch("products.json").then((p) => p.json()).then((res) => {
+  fetch("https://iguannalin.github.io/ctw/2150/products.json").then((p) => p.json()).then((res) => {
     console.log(res);
     startShopping(Array.from(res.pageProps.data.results));
   });
