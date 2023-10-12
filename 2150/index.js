@@ -39,9 +39,14 @@ window.addEventListener("load", () => {
   }
           
 
-  fetch("https://seasons986.pythonanywhere.com/groceries").then((r) => r.json()).then((d) => {
-    if (d) {
-      startShopping(Array.from(d.pageProps.data.results));
-    }
-  })
+  fetch("products.json").then((p) => p.json()).then((res) => {
+    console.log(res);
+    startShopping(Array.from(res.pageProps.data.results));
+  });
+  // fetch("https://seasons986.pythonanywhere.com/groceries").then((r) => r.json()).then((d) => {
+  //   if (d) {
+  //     startShopping(Array.from(d.pageProps.data.results));
+  //   } else {
+  //   }
+  // })
 });
