@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "DotGothic16";
+  src: url('https://iguannalin.github.io/ctw/manifesto/DotGothic16/DotGothic16-Regular.ttf');
+}
+
 :root {
   --main-bg-color: rgb(35, 35, 35);
   --main-text-color: #f9faffde;
@@ -11,20 +16,55 @@ html {
 
 body {
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
-  flex-flow: column wrap;
+  flex-flow: column;
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
   text-shadow: var(--shadow-color) -2px 2px 8px;
-  min-height: 1000vh;
-  transition: all 0.2s ease-in-out;
+  height: 100vh;
+  margin: 0 auto;
 }
 
 #container {
+  margin-top: 25vh;
   display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-  /* overflow: clip; */
-  width: 200px;
+  align-items: baseline;
+  flex-flow: row;
+  box-sizing: border-box;
+  padding: 1px 12px;
+}
+
+#subtitle {
+  content: "~";
+  height: 16px;
+  margin-top: 1px;
+  width: 80vw;
+  border-top: white 10px solid;
+  font-style: italic;
+}
+
+a {
+  box-sizing: border-box;
+  display: block;
+  border: 2px solid #47f933;
+  background-color: green;
+  border-radius: 2px;
+  padding: 6px 12px;
+  writing-mode: vertical-rl;
+  text-decoration: none;
+  font-size: 18px;
+  cursor: crosshair;
+  font-family: DotGothic16;
+  margin: 0 1px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+a:hover {
+  transform: rotateZ(-20deg);
+  /* margin-bottom: 20px; */
+  /* translate: -20px -100px; */
 }
