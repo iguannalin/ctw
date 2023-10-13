@@ -1,29 +1,12 @@
 window.addEventListener("load", () => {
-  function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
-  }
-
   const container = document.getElementById("container");
-  const subtitle = document.getElementById("subtitle");
+  let count = (window.innerWidth/160) *(window.innerHeight/16)
 
-  function loadShelf(data) {
-    data.forEach((item) => {
-      // const div = document.createElement("div");
-      const a = document.createElement("a");
-      a.innerText = item.name;
-      a.href = item.url;
-      a.onmouseover = () => subtitle.innerText = item.description;
-      a.onmouseout = () => subtitle.innerText = "~";
-      a.style.height = Math.max(15, (item.name.length))+"ch";
-      a.style.fontSize = Math.max(16, item.name.length % 24)+"px";
-      // div.appendChild(a);
-      container.appendChild(a);
-    })
+  function makeProgress() {
+    const progress = document.createElement("progress");
+    container.appendChild(progress);
   }
 
-  fetch("sites.json").then((r) => r.json()).then((d) => {
-    loadShelf(d);
-  });
+  for (let i = 0; i < (window.innerHeight/16); i++) setTimeout(makeProgress, i); //init
+  window.onscroll = () => makeProgress();
 });
